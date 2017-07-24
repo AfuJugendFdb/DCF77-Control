@@ -1,12 +1,12 @@
 //#ifndef _DDS_H_
 //#define _DDS_H_
 
-#define DDS_DDR		DDRB
-#define DDS_Port	PORTB
-#define RST		0	//DDS Reset
-#define FQ		1	//DDS Frequency Update
-#define CLK		2	//DDS Clock (für serielle Übertragung)
-#define DATA	3	//Serielle Datenleitung für den DDS
+#define DDS_DDR		DDRD
+#define DDS_Port	PORTD
+#define RST		7	//DDS Reset
+#define FQ		6	//DDS Frequency Update
+#define CLK		5	//DDS Clock (für serielle Übertragung)
+#define DATA	4	//Serielle Datenleitung für den DDS
 
 //Prototypen
 void DDS_init(void);
