@@ -21,7 +21,7 @@ int main(void)
 		
 	//DDS-Modul auf 77,5kHz einstellen
 	//...
-	DDS_setFrequency(3580000);
+	DDS_setFrequency(80000);
 	
 	while(1)
 	{
@@ -35,7 +35,7 @@ void sendTimeCode(void)
 {
 	//Zeichenstrom Bit für Bit abtasten
 	
-	for(uint8_t bitPosition = 0; bitPosition < 64; bitPosition++)
+	for(uint8_t bitPosition = 59; bitPosition >= 0; bitPosition--)
 	{
 		if((timeCode & (1 << bitPosition)) == 0)
 		{
